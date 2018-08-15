@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 )
 
+//usage: command <workdir> <port>
 func main() {
 	var workdir string
 	port := "8070"
@@ -22,10 +23,18 @@ func main() {
 
 	args := os.Args
 	if len(args) > 1 {
+		workdir = args[1]
+	}
+	if len(args) > 2 {
 		port = args[2]
 	}
-	fmt.Printf("Http workdir: %s, port: %s\n", workdir, port)
 
+	if workdir == "--help" {
+		fmt.Printf("Usage: command <workdir> <port>\n")
+		return
+	}
+
+	fmt.Printf("Http workdir: %s, port: %s\n", workdir, port)
 	http.Handle("/", http.FileServer(http.Dir(workdir)))
 	e := http.ListenAndServe(":"+port, nil)
 	fmt.Println(e)
