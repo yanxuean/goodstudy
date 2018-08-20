@@ -1,2 +1,2 @@
-# googstudy
+# goodstudy
 goodgoodstudy,daydayup...
