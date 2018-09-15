@@ -1,0 +1,12 @@
+{
+  "metadata": {
+     "name": "busybox-sandbox2",
+     "namespace": "default",
+     "attempt": 1,
+     "uid": "hdishd83djaidwnduwk28bcsc"
+  },
+  "linux": {
+  },
+  "log_directory": "//tmp//logs//"
+
+}

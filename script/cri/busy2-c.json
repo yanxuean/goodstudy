@@ -1,0 +1,15 @@
+{
+  "metadata": {
+      "name": "busybox2"
+  },
+  "image":{
+      "image": "busybox"
+  },
+  "command": [
+      "top"
+  ],
+  "linux": {
+
+  },
+  "log_path": "containerName_Instance.log"
+}
